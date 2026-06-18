@@ -1,0 +1,64 @@
+/*
+Template Name: Tailwick - Admin & Dashboard Template
+Author: Themesdesign
+Website: https://themesdesign.in/
+Contact: themesdesign.in@gmail.com
+*/
+
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ========= Tailwind CSS ========= */
+@import 'tailwindcss';
+
+/* ========= Preline UI ========= */
+@import 'preline/variants.css';
+
+/* ========= Themes Config ========= */
+@import './themes.css';
+
+/* ========= Tailwind Plugin ========= */
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+
+/* ========= Cutsome CSS ========= */
+
+@import './structure/_general.css';
+@import './structure/_sidenav.css';
+@import './structure/_topbar.css';
+
+/* Custome Components */
+@import './custom/_reboot.css';
+@import './custom/_helper.css';
+@import './custom/_buttons.css';
+@import './custom/_card.css';
+@import './custom/_dropdown.css';
+@import './custom/_forms.css';
+@import './custom/_print.css';
+@import './custom/_chart.css';
+
+/* Simplebar */
+@import './custom/_simplebar.css';
+
+/* Calendar */
+@import './custom/_calendar.css';
+
+/* === Custom Logo Sizing === */
+img[alt*="logo dark"], 
+img[alt*="logo light"], 
+img[alt*="Dark logo"], 
+img[alt*="Light logo"] {
+  height: 4rem !important; /* Max height for top navbar box */
+  max-width: none !important;
+  width: auto !important;
+  transform: scale(1.8); /* Scale it up by 180% to crop out empty padding around the file */
+}
+
+/* Keep the mini sidebar icon from getting too large */
+img.logo-sm, 
+img[alt*="Small logo"] {
+  height: 2.25rem !important; 
+  transform: scale(1.5);
+}
