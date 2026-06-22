@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { LuDownload, LuSearch, LuTriangleAlert, LuCircleCheck, LuLoader } from 'react-icons/lu';
+import { LuTriangleAlert, LuCircleCheck, LuLoader } from 'react-icons/lu';
 import httpClient from '@/helpers/httpClient';
 
 const AvailableStockList = () => {
@@ -31,15 +31,6 @@ const AvailableStockList = () => {
     <div className="card">
       <div className="card-header flex justify-between items-center whitespace-nowrap overflow-auto gap-3">
         <h6 className="card-title">Inventaire Actuel</h6>
-        <div className="flex gap-2">
-          <div className="relative md:block hidden">
-            <input type="text" className="form-input form-input-sm ps-9" placeholder="Filtrer..." />
-            <LuSearch className="absolute start-3 top-1/2 -translate-y-1/2 size-3.5 text-default-500" />
-          </div>
-          <button className="btn btn-sm bg-primary text-white" onClick={fetchProducts}>
-            <LuDownload className="size-3.5 me-1" /> Actualiser
-          </button>
-        </div>
       </div>
       <div className="overflow-x-auto">
         {loading ? (
