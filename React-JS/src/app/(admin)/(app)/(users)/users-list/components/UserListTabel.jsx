@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import httpClient from '@/helpers/httpClient';
-import { LuChevronLeft, LuChevronRight, LuCircleCheck, LuCircleX, LuDownload, LuEllipsis, LuEye, LuLoader, LuPlus, LuSearch, LuSlidersHorizontal, LuSquarePen, LuTrash2, LuTriangleAlert } from 'react-icons/lu';
+import { LuChevronLeft, LuChevronRight, LuCircleCheck, LuCircleX, LuEllipsis, LuEye, LuLoader, LuPlus, LuSquarePen, LuTrash2 } from 'react-icons/lu';
 
 const UserListTabel = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -59,36 +59,6 @@ const UserListTabel = () => {
           <LuPlus className="size-4 me-1" />
           Ajouter un utilisateur
         </button>
-      </div>
-
-      <div className="card-header">
-        <div className="md:flex items-center md:space-y-0 space-y-4 gap-3">
-          <div className="relative">
-            <input type="email" className="form-input form-input-sm ps-9" placeholder="Rechercher par nom, email..." />
-            <div className="absolute inset-y-0 start-0 flex items-center ps-3">
-              <LuSearch className="size-3.5 flex items-center text-default-500 fill-default-100" />
-            </div>
-          </div>
-
-          <select className="form-input form-input-sm">
-            <option defaultValue="">Sélectionner le statut</option>
-            <option>Caché</option>
-            <option>Rejeté</option>
-            <option>Vérifié</option>
-            <option>En attente</option>
-          </select>
-        </div>
-
-        <div className="flex gap-2 items-center flex-wrap">
-          <button type="button" className="btn btn-sm bg-transparent border border-dashed border-primary  text-primary hover:bg-primary/10">
-            <LuDownload className="size-4" />
-            Importer
-          </button>
-
-          <button type="button" className="btn btn-sm size-7.5 bg-default-100 text-default-500 hover:bg-default-1500  hover:text-white">
-            <LuSlidersHorizontal className="size-4" />
-          </button>
-        </div>
       </div>
 
       <div className="flex flex-col">

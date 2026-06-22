@@ -11,7 +11,6 @@ import avatar3 from '@/assets/images/user/avatar-3.png';
 import avatar5 from '@/assets/images/user/avatar-5.png';
 import avatar7 from '@/assets/images/user/avatar-7.png';
 import { Link } from 'react-router';
-import { TbSearch } from 'react-icons/tb';
 import SimpleBar from 'simplebar-react';
 import SidenavToggle from './SidenavToggle';
 import ThemeModeToggle from './ThemeModeToggle';
@@ -156,16 +155,6 @@ const Topbar = () => {
       <div className="w-full flex items-center justify-between px-6">
         <div className="flex items-center gap-5">
           <SidenavToggle />
-
-          <div className="lg:flex hidden items-center relative">
-            <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-              <TbSearch className="text-base" />
-            </div>
-            <input type="search" id="topbar-search" className="form-input px-12 text-sm rounded border-transparent focus:border-transparent w-60" placeholder="Search something..." />
-            <button type="button" className="absolute inset-y-0 end-0 flex items-center pe-4">
-              <span className="ms-auto font-medium">⌘ K</span>
-            </button>
-          </div>
         </div>
 
         </div>

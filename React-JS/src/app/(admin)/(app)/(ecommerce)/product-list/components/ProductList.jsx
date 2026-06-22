@@ -1,6 +1,5 @@
 import { Link } from 'react-router';
-import Flatpickr from 'react-flatpickr';
-import { LuChevronLeft, LuChevronRight, LuEllipsis, LuEye, LuPlus, LuSearch, LuSquarePen, LuTrash2, LuLoader } from 'react-icons/lu';
+import { LuChevronLeft, LuChevronRight, LuEllipsis, LuEye, LuPlus, LuSquarePen, LuTrash2, LuLoader } from 'react-icons/lu';
 import { useState, useEffect } from 'react';
 import httpClient from '@/helpers/httpClient';
 
@@ -50,21 +49,7 @@ const ProductList = () => {
 
   return <div className="grid grid-cols-1 gap-5 mb-5">
     <div className="card">
-      <div className="card-header">
-        <div className="md:flex md:space-y-0 space-y-3.5 gap-3 items-center">
-          <div className="relative">
-            <input type="email" className="ps-11 form-input form-input-sm w-full" placeholder="Rechercher..." />
-            <div className="absolute inset-y-0 start-0 flex items-center ps-3">
-              <LuSearch className="size-3.5 flex items-center text-default-500" />
-            </div>
-          </div>
-
-          <Flatpickr options={{
-            mode: 'range',
-            dateFormat: 'd M, Y'
-          }} className="form-input form-input-sm w-full" placeholder="Sélectionner une date" />
-        </div>
-
+      <div className="card-header flex justify-end">
         <Link to="/product-create" className="btn btn-sm bg-primary text-white">
           <LuPlus className="size-4 me-1" />
           Ajouter un Produit
